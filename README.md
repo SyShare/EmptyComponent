@@ -14,13 +14,16 @@ xml布局文件可配置或者全部动态配置
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-
+        
         <com.youloft.widget.EmptyLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
+            
     </LinearLayout>
     
     
     
  
  #2、动态创建
+
+  ![](./screenshot/img_01.jpg)
