@@ -1,0 +1,46 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    ext.kotlin_version = '1.2.70'
+    repositories {
+        google()
+        jcenter()
+        maven { url "https://jitpack.io" }
+        mavenCentral()
+        maven {
+            url "https://dl.bintray.com/sharebysy/Depend"
+        }
+        maven {
+            url "http://192.168.1.66:8082/repository/lofthzl/"
+        }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.1.2'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        //统一依赖插件
+        classpath 'com.depend:depes:1.0.3'
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    apply plugin: 'com.depend'
+
+    repositories {
+        jcenter()
+        maven { url "https://jitpack.io" }
+        mavenCentral()
+        maven {
+            url "https://dl.bintray.com/sharebysy/Depend"
+        }
+        maven {
+            url "http://192.168.1.66:8082/repository/lofthzl/"
+        }
+        google()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <declare-styleable name="FinalCircleImageView" tools:ignore="ResourceName">
+        <attr name="circle_border_width" format="dimension" />
+        <attr name="circle_border_color" format="color" />
+        <attr name="circle_border_overlay" format="boolean" />
+        <attr name="circle_fill_color" format="color" />
+    </declare-styleable>
+</resources>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <declare-styleable name="MainTabLayout" tools:ignore="ResourceName">
+        <attr name="indicatorWidth" format="dimension" />
+        <attr name="indicatorHeight" format="dimension" />
+        <attr name="indicatorColor" format="color" />
+        <attr name="indicatorStartColor" format="color"/>
+        <attr name="indicatorEndColor" format="color"/>
+        <attr name="gradient" format="boolean"/>
+    </declare-styleable>
+</resources>

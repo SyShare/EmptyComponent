@@ -1,0 +1,8 @@
+<resources>
+    <string name="widget_app_name">widget_model</string>
+    <!--list empty-->
+    <string name="widget_list_empty">暂无内容</string>
+    <string name="widget_error_view_load_error_click_to_refresh">内容加载失败\n点击重新加载</string>
+    <string name="widget_network_disconnected_tips">网络异常，检查网络</string>
+    <string name="widget_error_view_loading">加载中…</string>
+</resources>

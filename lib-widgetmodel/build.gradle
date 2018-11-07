@@ -1,0 +1,42 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply from: '../maven_push.gradle'
+
+android {
+    compileSdkVersion depends.compileSdkVersion
+    buildToolsVersion depends.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion depends.minSdkVersion
+        targetSdkVersion depends.targetSdkVersion
+
+        versionCode 1
+        versionName "1.0"
+
+    }
+
+    resourcePrefix "widget_"
+
+    compileOptions {//对lambda的支持
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    implementation 'com.youloft.maven:lib-utils:1.0.3'
+    compileOnly depends.appcompat_v7()
+    compileOnly depends.design()
+    api 'com.makeramen:roundedimageview:2.1.1'
+}

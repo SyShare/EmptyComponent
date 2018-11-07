@@ -1,0 +1,40 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion depends.compileSdkVersion
+    buildToolsVersion depends.buildToolsVersion
+
+    defaultConfig {
+        applicationId "com.youlu.widget"
+        minSdkVersion depends.minSdkVersion
+        targetSdkVersion depends.targetSdkVersion
+
+        versionCode 1
+        versionName "1.0"
+
+    }
+
+    compileOptions {//对lambda的支持
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    implementation depends.appcompat_v7()
+    implementation depends.design()
+    implementation project(':lib-widgetmodel')
+}
+

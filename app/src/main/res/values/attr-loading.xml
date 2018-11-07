@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="ResourceName">
+    <array name="g_default_loading_fg" >
+        <item>#00bcd4</item>
+        <item>#9c27b0</item>
+        <item>#5677fc</item>
+        <item>#ff9800</item>
+        <item>#e91e63</item>
+    </array>
+    <attr format="reference" name="gLoadingStyle"/>
+    <attr name="gBackgroundColor" format="color|reference" />
+    <declare-styleable name="Loading">
+        <attr name="gBackgroundLineSize" format="dimension" />
+        <attr name="gForegroundLineSize" format="dimension" />
+        <attr name="gBackgroundColor" />
+        <attr name="gForegroundColor" format="reference|color" />
+        <attr name="gProgressStyle">
+            <enum name="circle" value="1" />
+            <enum name="line" value="2" />
+        </attr>
+        <attr name="gAutoRun" format="boolean" />
+        <attr name="gProgressFloat" format="float" />
+    </declare-styleable>
+</resources>
